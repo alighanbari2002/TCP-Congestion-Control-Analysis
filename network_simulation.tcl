@@ -1,7 +1,7 @@
 # Get tcp congestion algorithm name from input
 if { $argc != 1 } {
-   puts "The congestion.tcl script requires tcp congestion alogirthm name as input"
-   puts "For example, ns congestion.tcl Newreno"
+   puts "The simulation.tcl script requires tcp congestion alogirthm name as input"
+   puts "For example, ns simulation.tcl Newreno"
    puts "Please try again."
 } else {
    if { [lindex $argv 0] == "Tahoe" } {
@@ -18,10 +18,10 @@ set ns [new Simulator]
 $ns color 1 Blue
 $ns color 2 Red
 
-# Open the nam file congestion.nam and the variable-trace file congestion.tr
-set namfile [open congestion.nam w]
+# Open the nam file simulation.nam and the variable-trace file simulation.tr
+set namfile [open simulation.nam w]
 $ns namtrace-all $namfile
-set tracefile [open congestion.tr w]
+set tracefile [open simulation.tr w]
 $ns trace-all $tracefile
 
 # Define a 'finish' procedure
